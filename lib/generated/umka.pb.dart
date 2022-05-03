@@ -299,3 +299,182 @@ class Evaluation extends $pb.GeneratedMessage {
   void clearMark() => clearField(3);
 }
 
+class AnsweredQuestion extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AnsweredQuestion', createEmptyInstance: create)
+    ..aOM<Question>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'question', subBuilder: Question.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'answer')
+    ..hasRequiredFields = false
+  ;
+
+  AnsweredQuestion._() : super();
+  factory AnsweredQuestion({
+    Question? question,
+    $core.String? answer,
+  }) {
+    final _result = create();
+    if (question != null) {
+      _result.question = question;
+    }
+    if (answer != null) {
+      _result.answer = answer;
+    }
+    return _result;
+  }
+  factory AnsweredQuestion.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AnsweredQuestion.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AnsweredQuestion clone() => AnsweredQuestion()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AnsweredQuestion copyWith(void Function(AnsweredQuestion) updates) => super.copyWith((message) => updates(message as AnsweredQuestion)) as AnsweredQuestion; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AnsweredQuestion create() => AnsweredQuestion._();
+  AnsweredQuestion createEmptyInstance() => create();
+  static $pb.PbList<AnsweredQuestion> createRepeated() => $pb.PbList<AnsweredQuestion>();
+  @$core.pragma('dart2js:noInline')
+  static AnsweredQuestion getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AnsweredQuestion>(create);
+  static AnsweredQuestion? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  Question get question => $_getN(0);
+  @$pb.TagNumber(1)
+  set question(Question v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasQuestion() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearQuestion() => clearField(1);
+  @$pb.TagNumber(1)
+  Question ensureQuestion() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get answer => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set answer($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAnswer() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAnswer() => clearField(2);
+}
+
+class Exam extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Exam', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.O3)
+    ..pc<Question>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'questions', $pb.PbFieldType.PM, subBuilder: Question.create)
+    ..hasRequiredFields = false
+  ;
+
+  Exam._() : super();
+  factory Exam({
+    $core.int? id,
+    $core.Iterable<Question>? questions,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (questions != null) {
+      _result.questions.addAll(questions);
+    }
+    return _result;
+  }
+  factory Exam.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Exam.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Exam clone() => Exam()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Exam copyWith(void Function(Exam) updates) => super.copyWith((message) => updates(message as Exam)) as Exam; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Exam create() => Exam._();
+  Exam createEmptyInstance() => create();
+  static $pb.PbList<Exam> createRepeated() => $pb.PbList<Exam>();
+  @$core.pragma('dart2js:noInline')
+  static Exam getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Exam>(create);
+  static Exam? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get id => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set id($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<Question> get questions => $_getList(1);
+}
+
+class InterviewMessage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'InterviewMessage', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'body')
+    ..hasRequiredFields = false
+  ;
+
+  InterviewMessage._() : super();
+  factory InterviewMessage({
+    $core.String? name,
+    $core.String? body,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (body != null) {
+      _result.body = body;
+    }
+    return _result;
+  }
+  factory InterviewMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory InterviewMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  InterviewMessage clone() => InterviewMessage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  InterviewMessage copyWith(void Function(InterviewMessage) updates) => super.copyWith((message) => updates(message as InterviewMessage)) as InterviewMessage; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static InterviewMessage create() => InterviewMessage._();
+  InterviewMessage createEmptyInstance() => create();
+  static $pb.PbList<InterviewMessage> createRepeated() => $pb.PbList<InterviewMessage>();
+  @$core.pragma('dart2js:noInline')
+  static InterviewMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<InterviewMessage>(create);
+  static InterviewMessage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get body => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set body($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasBody() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBody() => clearField(2);
+}
+
